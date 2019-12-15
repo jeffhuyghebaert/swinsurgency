@@ -1,0 +1,30 @@
+{{ define "main" }}
+  <h1>{{ .Title }}</h1>
+  <h3 class="mt-5 mb-3">Active Characters</h3>
+  <div class="row">
+  {{ range where .Pages "Params.status" "active" }}
+  <div class="col-sm-3">
+    <div class="card border-0 shadow profile-card">
+      <div class="card-body p-2 d-flex">
+        {{ with (.Resources.Match "headshot.*") . }}
+          {{ range . }}
+          {{ $image := .Resize "x150" }}
+            <div class="profile-image-wrapper mx-auto d-flex">
+              <img src="{{ $image.RelPermalink }}" />
+            </div>
+          {{ end }}
+        {{ else }}
+          <div class="profile-placeholder d-flex bg-light">
+            <span class="my-auto mx-auto rounded-circle bg-primary text-light px-4 py-3">{{ .Params.initials }}</span>
+          </div>
+        {{ end }}
+      </div>
+      <div class="card-footer text-center border-0 bg-info text-white">
+        <a href="{{ .Params.slug }}" class="stretched-link">{{ .Params.fullname }}</a>
+      </div>
+    </div>
+  </div>
+  {{ end }}
+  </div>
+  <h3 class="mt-5">Retired Characters</h3>
+{{ end }}

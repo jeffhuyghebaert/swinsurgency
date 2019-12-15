@@ -1,0 +1,8 @@
+{
+  "app": {
+    "css": "css/app.css",
+    "cssIntegrity": "sha512-387M3pXI0bANDGxIRymtF6Ndhu2Dzk21XZ2BPce8iBO6aUMKtjJB1kjMLaPKrQeokMEKglW+v6L9PwVlpZ5NUQ==",
+    "js": "js/app.0216916b3f7be2844b53.js",
+    "jsIntegrity": "sha512-RGkozszOGuYD4He05eoy9A5z58zgcSD+aHsaSipMQ/c0BwTzesCAlvfMrCXGSHSmcR6JyVhQmF469pcLMAvLlQ=="
+  }
+}

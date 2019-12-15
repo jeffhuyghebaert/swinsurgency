@@ -1,0 +1,61 @@
+@import 'variables';
+@import "~bootstrap";
+
+body {
+  font-family: "Roboto", sans-serif;
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;;
+}
+.screen {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  opacity: 0.025;
+  background: url('/images/empire.svg') no-repeat center center;
+  background-size: 75%;
+}
+
+main {
+  flex: 1 0 auto;
+  opacity: 1;
+}
+
+.container-fluid {
+  max-width: 1200px;
+  img {
+    max-height: 100%;
+    max-width: 100%;
+  }
+}
+
+.profile-card {
+  .profile-image-wrapper {
+    min-height: 150px;
+    img {
+      align-self: center;
+    }
+  }
+  
+  a {
+    color: #fff;
+    text-transform: uppercase;
+  }
+}
+
+img.card-img-top {
+  max-height: 300px;
+  align-self: center;
+  width: initial;
+  padding: 15px;
+
+}
+
+.profile-placeholder {
+  height: 150px;
+  border-top-left-radius: 4px;
+  border-top-right-radius: 4px;
+  font-size: 48px;
+}

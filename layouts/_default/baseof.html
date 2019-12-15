@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+{{- partial "head.html" . -}}
+
+<body>
+  <div class="screen"></div>
+  {{- partial "header.html" . -}}
+  
+  <main>
+    <div class="container-fluid">
+      {{- block "main" . }}{{- end }}
+      {{- partial "recent-cards.html" . -}}
+    </div>
+  </main>
+  
+  
+
+  {{- partial "footer.html" . -}}
+  {{ $script := .Site.Data.assets.app }}
+  {{ with $script.js }}
+  <script src="{{ . | relURL }}" {{ with $.Site.Data.assets.app.jsIntegrity }} integrity="{{ . | safeHTML }}" {{ end }}
+    type="text/javascript" defer="defer"></script>
+  {{ end }}
+</body>
+
+</html>

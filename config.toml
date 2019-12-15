@@ -1,0 +1,35 @@
+baseURL = "/"
+languageCode = "en-us"
+title = "Star Wars: Insurgency MUSH"
+
+[menu]
+  [[menu.main]]
+    title = "Theme"
+    identifier = "theme"
+    url = "/theme"
+    weight = 1
+  [[menu.main]]
+    title = "Systems"
+    identifier = "systems"
+    url = "/systems"
+    weight = 2
+  [[menu.main]]
+    title = "Game Files"
+    identifier = "news"
+    url = "/news"
+    weight = 3
+  [[menu.main]]
+    title = "Characters"
+    identifier = "characters"
+    url = "/characters"
+    weight = 4
+  [[menu.main]]
+    title = "Logs"
+    identifier = "logs"
+    url = "/logs"
+    weight = 5
+  [[menu.main]]
+    title = "Resources"
+    identifier = "resources"
+    url = "/resources"
+    weight = 6
