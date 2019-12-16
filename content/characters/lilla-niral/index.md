@@ -8,7 +8,7 @@ status: active
 fullname: Lilla Niral
 race: Human
 sex: Female
-playedby: Angelina Jolie
+playedby: Michelle Rodriguez
 initials: LN
 
 

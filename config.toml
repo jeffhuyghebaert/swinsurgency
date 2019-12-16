@@ -4,32 +4,37 @@ title = "Star Wars: Insurgency MUSH"
 
 [menu]
   [[menu.main]]
+    title = "Home"
+    identify = "home"
+    url = "/"
+    weight = 1
+  [[menu.main]]
     title = "Theme"
     identifier = "theme"
     url = "/theme"
-    weight = 1
+    weight = 2
   [[menu.main]]
     title = "Systems"
     identifier = "systems"
     url = "/systems"
-    weight = 2
+    weight = 3
   [[menu.main]]
     title = "Game Files"
     identifier = "news"
     url = "/news"
-    weight = 3
+    weight = 4
   [[menu.main]]
     title = "Characters"
     identifier = "characters"
     url = "/characters"
-    weight = 4
+    weight = 5
   [[menu.main]]
     title = "Logs"
     identifier = "logs"
     url = "/logs"
-    weight = 5
+    weight = 7
   [[menu.main]]
     title = "Resources"
     identifier = "resources"
     url = "/resources"
-    weight = 6
+    weight = 7
