@@ -4,7 +4,7 @@ date: 2019-12-13T21:25:17-08:00
 draft: false
 slug: "dace-keran"
 
-status: retired
+status: active
 fullname: "Dace Keran"
 race: "Human"
 charheight: 6'0

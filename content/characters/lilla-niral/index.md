@@ -1,7 +1,7 @@
 ---
 title: "Lilla Niral"
 date: 2019-12-13T21:26:00-08:00
-draft: true
+draft: false
 slug: "lilla-niral"
 
 status: active
