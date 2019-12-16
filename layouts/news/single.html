@@ -1,0 +1,24 @@
+{{ define "main" }}
+<div class="row">
+  <div class="col-sm-2">
+    <div class="sidebar card">
+      <div class="card-body">
+        <ul>
+          {{ $currentNews := . }}
+          {{ range sort (where .Site.RegularPages "Section" "news") "Title" }}
+          <li><a href="/news/{{ .Params.slug }}" {{ if eq .Params.slug $currentNews.Params.slug }}class="active"{{ end }}>{{ .Title }}</a></li>
+          {{ end }}
+        </ul>
+      </div>
+    </div>
+    
+  </div>
+  <div class="col-sm-10">
+    <h2 class="text-uppercase">NEWS {{ .Title }}</h2>
+    <h6 class="text-muted">Last Updated: {{ .Params.LastUpdated | default (.Date.Format "Jan 2, 2006") }}</h6>
+    <div class="mt-5">
+      {{ .Content }}
+    </div>
+  </div>
+</div>
+{{ end }}

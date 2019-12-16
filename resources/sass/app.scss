@@ -17,6 +17,7 @@ body {
   opacity: 0.025;
   background: url('/images/empire.svg') no-repeat center center;
   background-size: 75%;
+  z-index: -1;
 }
 
 main {
@@ -65,6 +66,19 @@ img.card-img-top {
   .nav-link {
     &.active {
       font-weight: 500;
+    }
+  }
+}
+
+.sidebar {
+  ul {
+    list-style-type: none;
+    padding: 0;
+    font-size: 0.85rem;
+    li {
+      a.active {
+        font-weight: bold;
+      }
     }
   }
 }

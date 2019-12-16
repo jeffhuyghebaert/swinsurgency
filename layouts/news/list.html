@@ -1,0 +1,10 @@
+{{ define "main" }}
+  <h2>{{ .Title }}</h2>
+  {{ .Content }}
+
+  <div class="mt-5">
+  {{ range sort .RegularPages "Title" }}
+    <a href="/news/{{ .Params.slug }}" class="btn btn-small btn-primary mb-3">NEWS {{ .Title | upper }}</a>
+  {{ end }}
+  </div>
+{{ end }}

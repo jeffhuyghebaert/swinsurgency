@@ -8,6 +8,10 @@ status: active
 fullname: Lilla Niral
 race: Human
 sex: Female
+charheight: 5'9
+charweight: 130lbs
+hair: Blonde
+eyes: Orange
 playedby: Michelle Rodriguez
 initials: LN
 
