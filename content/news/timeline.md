@@ -1,7 +1,7 @@
 ---
 title: "Timeline"
 date: 2019-12-16T00:34:22-08:00
-draft: true
+draft: false
 slug: timeline
 ---
 
