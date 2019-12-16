@@ -82,3 +82,13 @@ img.card-img-top {
     }
   }
 }
+
+footer {
+  a {
+    color: #aaa;
+    &:hover {
+      color: #aaa;
+      text-decoration: underline;
+    }
+  }
+}

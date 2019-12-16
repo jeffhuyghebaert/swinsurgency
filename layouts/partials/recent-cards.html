@@ -1,44 +1,48 @@
-<div class="row mt-5">
-  <div class="col-sm-4">
-    <ul class="list-group">
-      <li class="list-group-item bg-info text-light">Recent Game Files</li>
-      {{ range $key, $value := first 5 (where .Site.RegularPages "Section" "news").ByDate.Reverse }}
-      <li class="list-group-item">
-        <span class="float-left"><a href="/news/{{ .Slug }}" class="text-left">{{ .Title }}</a></span>
-        <span class="text-muted float-right"><small>{{ .Date.Format "Jan 2, 2006" }}</small></span>
-      </li>
-      {{ end }}
-      <li class="list-group-item text-right">
-        <small><a href="/news/">See All</a></small>
-      </li>
-    </ul>
-  </div>
-  <div class="col-sm-4">
-    <ul class="list-group">
-      <li class="list-group-item bg-info text-light">Recent Character Profiles</li>
-      {{ range $key, $value := first 5 (where .Site.RegularPages "Section" "characters").ByDate.Reverse }}
-      <li class="list-group-item">
-        <span class="float-left"><a href="/characters/{{ .Slug }}" class="text-left">{{ .Title }}</a></span>
-        <span class="text-muted float-right"><small>{{ .Date.Format "Jan 2, 2006" }}</small></span>
-      </li>
-      {{ end }}
-      <li class="list-group-item text-right">
-        <small><a href="/characters/">See All</a></small>
-      </li>
-    </ul>
-  </div>
-  <div class="col-sm-4">
-    <ul class="list-group">
-      <li class="list-group-item bg-info text-light">Recent Logs</li>
-      {{ range $key, $value := first 5 (where .Site.RegularPages "Section" "logs").ByDate.Reverse }}
-      <li class="list-group-item">
-        <span class="float-left"><a href="/logs/{{ .Slug }}" class="text-left">{{ .Title }}</a></span>
-        <span class="text-muted float-right"><small>{{ .Date.Format "Jan 2, 2006" }}</small></span>
-      </li>
-      {{ end }}
-      <li class="list-group-item text-right">
-        <small><a href="/logs/">See All</a></small>
-      </li>
-    </ul>
+<div class="mt-5 bg-dark">
+  <div class="container-fluid py-3">
+    <div class="row">
+      <div class="col-sm-4">
+        <ul class="list-group border-0">
+          <li class="list-group-item bg-transparent border-0 text-light p-2 lead">Recent Game Files</b></li>
+          {{ range $key, $value := first 5 (where .Site.RegularPages "Section" "news").ByDate.Reverse }}
+          <li class="list-group-item bg-transparent border-0 px-2 py-0">
+            <span class="float-left"><a href="/news/{{ .Slug }}" class="text-left">{{ .Title }}</a></span>
+            <span class="text-muted float-right"><small>{{ .Date.Format "Jan 2, 2006" }}</small></span>
+          </li>
+          {{ end }}
+          <li class="list-group-item bg-transparent border-0 text-right p-2">
+            <small><a href="/news/">See All</a></small>
+          </li>
+        </ul>
+      </div>
+      <div class="col-sm-4">
+        <ul class="list-group">
+          <li class="list-group-item bg-transparent border-0 text-light p-2 lead">Recent Character Profiles</li>
+          {{ range $key, $value := first 5 (where .Site.RegularPages "Section" "characters").ByDate.Reverse }}
+          <li class="list-group-item bg-transparent border-0 py-0 px-2">
+            <span class="float-left"><a href="/characters/{{ .Slug }}" class="text-left">{{ .Title }}</a></span>
+            <span class="text-muted float-right"><small>{{ .Date.Format "Jan 2, 2006" }}</small></span>
+          </li>
+          {{ end }}
+          <li class="list-group-item bg-transparent border-0 text-right p-2">
+            <small><a href="/characters/">See All</a></small>
+          </li>
+        </ul>
+      </div>
+      <div class="col-sm-4">
+        <ul class="list-group">
+          <li class="list-group-item bg-transparent border-0 text-light p-2 lead">Recent Logs</li>
+          {{ range $key, $value := first 5 (where .Site.RegularPages "Section" "logs").ByDate.Reverse }}
+          <li class="list-group-item bg-transparent border-0 px-2 py-0">
+            <span class="float-left"><a href="/logs/{{ .Slug }}" class="text-left">{{ .Title }}</a></span>
+            <span class="text-muted float-right"><small>{{ .Date.Format "Jan 2, 2006" }}</small></span>
+          </li>
+          {{ end }}
+          <li class="list-group-item bg-transparent border-0 text-right p-2">
+            <small><a href="/logs/">See All</a></small>
+          </li>
+        </ul>
+      </div>
+    </div>
   </div>
 </div>

@@ -1,6 +1,6 @@
 {{ define "main" }}
-  <h2>{{ .Title }}</h2>
-  {{ .Content }}
+  <h2 class="text-uppercase">{{ .Title }}</h2>
+  <p>{{ .Content }}</p>
 
   <div class="mt-5">
   {{ range sort .RegularPages "Title" }}

@@ -1,5 +1,5 @@
 {{ define "main" }}
-  <h1>{{ .Title }}</h1>
+  <h2 class="text-uppercase">{{ .Title }}</h2>
   <h3 class="mt-5 mb-3">Active Characters</h3>
   <div class="row">
   {{ range where .Pages "Params.status" "active" }}
