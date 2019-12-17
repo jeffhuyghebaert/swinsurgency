@@ -12,8 +12,6 @@ The following concepts are banned, and are not appable in any way, shape or form
 
 * Non-canon races, such as Zeltrons, Hapans, Miraluka, and Ghostlings. If it didn't appear in the films or another canon source, it doesn't exist on our game.
 
-* Imperial characters are currently not playable. This may be a temporary restriction.
-
 * Droid PCs are also not currently playable. Pick an organic race please.
 
 If you are concerned about whether or not your concept is appropriate, please submit a +request to staff and we will review the case.
