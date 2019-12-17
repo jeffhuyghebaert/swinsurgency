@@ -4,4 +4,15 @@
 <div class="mt-5">
   {{ .Content }}
 </div>
+<div class="row">
+  {{ range sort .Pages "Title" }}
+    <div class="col-3">
+      <div class="card mb-3">
+        <div class="card-body text-center">
+          <a href="{{ .RelPermalink }}" class="stretched-link">{{ .Title }}</a>
+        </div>
+      </div>
+    </div>
+  {{ end }}
+</div>
 {{ end }}
