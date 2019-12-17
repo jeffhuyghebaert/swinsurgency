@@ -14,4 +14,14 @@ The following concepts are banned, and are not appable in any way, shape or form
 
 * Droid PCs are also not currently playable. Pick an organic race please.
 
+* Jedi Masters, Sith, and Dark Jedi
+
+* Imperial Inquisitors
+
+* Admirals, Generals, other high-ranking military commanders
+
+* Canon characters (Bail Organa, Luke Skywalker, Obi-wan Kenobi, Yoda, Vader, Han Solo, etcetera)
+
+* Planetary Leaders from planets on the playable grid, or major worlds in the SW galaxy.
+
 If you are concerned about whether or not your concept is appropriate, please submit a +request to staff and we will review the case.
