@@ -1,15 +1,13 @@
 {{ define "main" }}
 <div class="row">
   <div class="col-sm-2">
-    <div class="sidebar card">
-      <div class="card-body">
-        <ul>
-          {{ $currentNews := . }}
-          {{ range sort (where .Site.RegularPages "Section" "news") "Title" }}
-          <li><a href="/news/{{ .Params.slug }}" {{ if eq .Params.slug $currentNews.Params.slug }}class="active"{{ end }}>{{ .Title }}</a></li>
-          {{ end }}
-        </ul>
-      </div>
+    <div class="sidebar border-right">
+      <ul>
+        {{ $currentNews := . }}
+        {{ range sort (where .Site.RegularPages "Section" "news") "Title" }}
+        <li><a href="/news/{{ .Params.slug }}" {{ if eq .Params.slug $currentNews.Params.slug }}class="active"{{ end }}>{{ .Title }}</a></li>
+        {{ end }}
+      </ul>
     </div>
     
   </div>

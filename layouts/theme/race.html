@@ -1,38 +1,51 @@
 {{ define "main" }}
-<h2 class="text-uppercase">{{ .Title }}</h2>
-<h6 class="text-muted">Last Updated: {{ .Params.LastUpdated | default (.Date.Format "Jan 2, 2006") }}</h6>
-<div class="mt-5">
+
   <div class="row">
-    <div class="col-sm-9">
-      <h5>Race Summary</h5>
-      {{ .Content }}
-      {{ range $key, $value := .Params.Special }}
-        <h6>{{ humanize $key }}</h6>
-        <p>{{ $value }}</p>
-      {{ end }}
+    <div class="col-sm-2">
+      <div class="sidebar border-right">
+        <ul>
+          {{ $current := . }}
+          {{ range sort (where .Site.Pages "Params.layout" $current.Params.layout) "Title" }}
+          <li><a href="/theme/races/{{ .File.BaseFileName }}" {{ if eq .File.BaseFileName $current.File.BaseFileName }}class="active"
+              {{ end }}>{{ .Title }}</a></li>
+          {{ end }}
+        </ul>
+      </div>
     </div>
-    <div class="col-sm-3">
-      <div class="card">
-        <div class="card-header text-center">{{ .Title }} Attributes</div>
-        <div class="card-body">
-          <table class="table table-borderless table-sm">
-            <thead class="border-bottom">
-              <td></td>
-              <td class="text-right">Min</td>
-              <td class="text-right">Max</td>
-            </thead>
-            {{ range $key, $value := .Params.Stats }}
-            <tr>
-              <td><b>{{ humanize $key }}</b></td>
-              <td class="text-right">{{ $value.min }}</td>
-              <td class="text-right">{{ $value.max }}</td>
-            </tr>
-            {{ end }}
-          </table>
+    <div class="col-sm-10">
+      <h2 class="text-uppercase">{{ .Title }}</h2>
+      <h6 class="text-muted">Last Updated: {{ .Params.LastUpdated | default (.Date.Format "Jan 2, 2006") }}</h6>
+      <div class="mt-5 row">
+        <div class="col-sm-8">
+          <div class="mb-5">{{ .Content }}</div>
+          {{ range $key, $value := .Params.Special }}
+          <h6>{{ humanize $key }}</h6>
+          <p>{{ $value }}</p>
+          {{ end }}
+        </div>
+        <div class="col-sm-4">
+          <div class="card">
+            <div class="card-header text-center">{{ .Title }} Attributes</div>
+            <div class="card-body">
+              <table class="table table-borderless table-sm">
+                <thead class="border-bottom">
+                  <td></td>
+                  <td class="text-right">Min</td>
+                  <td class="text-right">Max</td>
+                </thead>
+                {{ range $key, $value := .Params.Stats }}
+                <tr>
+                  <td><b>{{ humanize $key }}</b></td>
+                  <td class="text-right">{{ $value.min }}</td>
+                  <td class="text-right">{{ $value.max }}</td>
+                </tr>
+                {{ end }}
+              </table>
+            </div>
+          </div>
         </div>
       </div>
     </div>
+    
   </div>
-  
-</div>
 {{ end }}
