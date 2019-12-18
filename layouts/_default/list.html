@@ -1,7 +1,7 @@
 {{ define "main" }}
   <h2 class="text-uppercase">{{ .Title }}</h2>
-  <h6 class="text-muted">Last Updated: {{ .Params.LastUpdated | default (.Date.Format "Jan 2, 2006") }}</h6>
-  <div class="mt-5">
+  <h6 class="text-muted border-bottom pb-3">Last Updated: {{ .Params.LastUpdated | default (.Date.Format "Jan 2, 2006") }}</h6>
+  <div class="mt-4">
     {{ .Content }}
   </div>
   <div class="row mt-5">
