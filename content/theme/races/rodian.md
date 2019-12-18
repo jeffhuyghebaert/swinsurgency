@@ -26,6 +26,8 @@ stats:
 
 special:
 
+language: Rodese
+
 images:
  - https://vignette.wikia.nocookie.net/starwars/images/d/d3/Rodian_DICE.png/revision/latest?cb=20151106032702
  - https://vignette.wikia.nocookie.net/starwars/images/2/23/Rodian_NEGAS.jpg/revision/latest?cb=20061127015745

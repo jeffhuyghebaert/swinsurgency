@@ -25,4 +25,6 @@ stats:
     max: 4D+2
 
 special:
+
+language: Togrutan
 ---

@@ -28,6 +28,8 @@ special:
   Aquatic: Mon Calamari are able to breathe both air and water, and can withstand extreme pressures found in ocean depths. They also gain a 1D+0 bonus to Swim, and do not suffer penalties for performing actions underwater.
 
   Enslaved: Mon Calamari are a slave race of the Galactic Empire, and any 'free' Mon Calamari has a price on their head.
+
+language: Calamari
 ---
 
 The Mon Calamari are a race of amphibious humanoids from the planet Mon Cala in

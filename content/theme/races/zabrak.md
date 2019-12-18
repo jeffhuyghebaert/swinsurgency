@@ -25,4 +25,6 @@ stats:
     max: 4D+0
 
 special:
+
+language: Zabraki
 ---

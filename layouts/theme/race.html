@@ -16,7 +16,12 @@
       <h6 class="text-muted">Last Updated: {{ .Params.LastUpdated | default (.Date.Format "Jan 2, 2006") }}</h6>
       <div class="mt-5 row">
         <div class="col-md-8">
-          <div class="mb-5">{{ .Content }}</div>
+          <div class="mb-5">
+            {{ .Content }}
+            {{ with .Params.Language }}
+              <p>Default Language: {{ . }}</p>
+            {{ end }}
+          </div>
           {{ range $key, $value := .Params.Special }}
           <h6>{{ humanize $key }}</h6>
           <p>{{ $value }}</p>

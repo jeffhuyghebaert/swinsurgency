@@ -30,6 +30,8 @@ special:
   Imperial Favor: Humans are the favored race of the Galactic Empire, while alien species are discriminated against and oppressed by the regime. As such, humans in this era tend to be looked upon with distrust by other, non-Imperial-aligned races, and suffer a 1D+0 penalty to social interactions with such beings, where trust is a mitigating factor.
 
   Language Affinity: Human gain an additional Language during character generation.
+
+language: Basic
 ---
 
 Humans are a bipedal mammalian species, and among the most prolific and common

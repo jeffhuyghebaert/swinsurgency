@@ -25,4 +25,6 @@ stats:
     max: 4D+1
 
 special:
+
+language: Trandoshan
 ---

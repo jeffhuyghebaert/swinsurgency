@@ -25,6 +25,8 @@ stats:
     max: 4D+0
 
 special:
+
+language: Basic
 ---
 
 Near Human isn't a specific species, but rather a catch-all term for those

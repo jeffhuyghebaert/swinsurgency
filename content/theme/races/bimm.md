@@ -28,6 +28,7 @@ special:
   Hagglers: Bimm are natural hagglers and merchants, and gain a 1D+0 bonus to the Bargain skill for commercial uses.
   Performers: Bimm are natural performers, and gain a 1D+0 bonus to their Perform skill.
 
+language: Bimmini
 ---
 
 Bimm are a diminutive mammalian humanoid species from the planet Bimmisaari,

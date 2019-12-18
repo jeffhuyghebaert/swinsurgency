@@ -26,6 +26,8 @@ stats:
 
 special:
 
+language: Shyriiiwook
+
 images: 
   - https://vignette.wikia.nocookie.net/starwars/images/1/1e/Chewbacca-Fathead.png/revision/latest?cb=20161108052810
   - https://vignette.wikia.nocookie.net/battlefront/images/b/ba/DICE_Wookiee_Warrior_cropped.jpg/revision/latest?cb=20190925204411
