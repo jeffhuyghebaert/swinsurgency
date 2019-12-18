@@ -1,6 +1,6 @@
 {{ define "main" }}
   <div class="row">
-    <div class="col-sm-2">
+    <div class="col-sm-3 col-md-2 d-none d-sm-block">
       <div class="sidebar border-right">
         <ul>
           {{ $current := . }}
@@ -11,20 +11,20 @@
         </ul>
       </div>
     </div>
-    <div class="col-sm-10">
+    <div class="col-sm-9 col-md-10 pr-md-5">
       <h2 class="text-uppercase">{{ .Title }}</h2>
       <h6 class="text-muted">Last Updated: {{ .Params.LastUpdated | default (.Date.Format "Jan 2, 2006") }}</h6>
       <div class="mt-5 row">
-        <div class="col-sm-8">
+        <div class="col-md-8">
           <div class="mb-5">{{ .Content }}</div>
           {{ range $key, $value := .Params.Special }}
           <h6>{{ humanize $key }}</h6>
           <p>{{ $value }}</p>
           {{ end }}
         </div>
-        <div class="col-sm-4">
-          <div class="card">
-            <div class="card-header text-center">{{ .Title }} Attributes</div>
+        <div class="col-md-4">
+          <div class="card border-0 shadow">
+            <div class="card-header text-center bg-secondary text-light border-0"><b>{{ .Title }} Attributes</b></div>
             <div class="card-body">
               <table class="table table-borderless table-sm">
                 <thead class="border-bottom">
@@ -44,6 +44,18 @@
           </div>
         </div>
       </div>
+      {{ with .Params.Images }}
+        <h6 class="mt-5">Images</h6>
+        <div class="row">
+          {{ range . }}
+            <div class="col">
+              <div class="img-thumbnail text-center p-3 h-100">
+                <a href="{{ . }}" target="_blank" class="stretched-link"><img src="{{ . }}" /></a>
+              </div>
+            </div>
+          {{ end }}
+        </div>
+      {{ end }}
     </div>
     
   </div>

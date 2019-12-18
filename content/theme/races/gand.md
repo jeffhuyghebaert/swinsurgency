@@ -27,6 +27,11 @@ stats:
 special:
   Ammonia Breathers: Gand are ammonia-breathers, and are unable to function in oxygen-rich atmospheres without the assistance of a respirator. Any Gand forced to breathe oxygen will suffer damage each round, starting at 1D+0 and increasing by 1D+0 every subsequent round.
   Regeneration: Gand are able to regenerate lost limbs; in the event of a Gand losing a limb they may make a Stamina roll once per day until the limb is fully healed. A Difficult roll or higher will result in the limb regenerating 10% of its remaining needed growth. Any roll lower than 10% means the limb did not regrow that day.
+
+images:
+  - https://vignette.wikia.nocookie.net/starwars/images/9/9a/GandAlienNEGAS.jpg/revision/latest?cb=20061205190815
+  - https://vignette.wikia.nocookie.net/starwars/images/0/0f/Zuckuss_Sideshow.png/revision/latest?cb=20161201055856
+  - https://vignette.wikia.nocookie.net/starwars/images/0/08/GandFindsman.jpg/revision/latest?cb=20060215025326
 ---
 
 Gand are a resilient insectoid species from the the planet Gand. They are

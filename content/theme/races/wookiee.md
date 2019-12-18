@@ -25,4 +25,9 @@ stats:
     max: 4D+0
 
 special:
+
+images: 
+  - https://vignette.wikia.nocookie.net/starwars/images/1/1e/Chewbacca-Fathead.png/revision/latest?cb=20161108052810
+  - https://vignette.wikia.nocookie.net/battlefront/images/b/ba/DICE_Wookiee_Warrior_cropped.jpg/revision/latest?cb=20190925204411
+  - https://www.syfy.com/sites/syfy/files/styles/1200x680/public/2018/04/chewbaccadennystradingcards2018.png
 ---

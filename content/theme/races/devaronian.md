@@ -26,6 +26,12 @@ stats:
 
 special:
   Poison Resistance: Devaronians possess two livers, which allows them to more efficiently filter most poisons and toxic substances from their body. The gain a 1D+0 bonus to resist the effects of poisons and toxins.
+
+images: 
+ - https://lumiere-a.akamaihd.net/v1/images/devaronian_51b6f148.jpeg?region=0%2C87%2C1560%2C878&width=960
+ - https://vignette.wikia.nocookie.net/starwars/images/5/55/DevaronianNEGAS.jpg/revision/latest?cb=20100616044458
+ - https://vignette.wikia.nocookie.net/starwars/images/b/b7/Devaronian_female.png/revision/latest?cb=20150927151421
+ 
 ---
 
 Devaronians are a bipedal humanoid race from the planet Devaron. Male
