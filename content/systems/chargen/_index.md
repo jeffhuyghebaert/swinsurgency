@@ -7,7 +7,7 @@ lastupdated: Dec 17, 2019
 
 Character Generation (CharGen) is the process by which you take the idea in your head and create a fully formed character in the context of the game. Character Generation is divided into several steps, and detailed instructions are provided at each step to walk you through the process.
 
-SW: Insurgency uses a variation on the D6 RPG system; if you are unfamiliar with D6, please read through [NEWS SYSTEM](/news/system) for an introduction.
+SW: Insurgency uses a variation on the D6 RPG system; if you are unfamiliar with D6, please read through [NEWS D6](/news/d6) for an introduction.
 
 #### Character Generation Overview
 

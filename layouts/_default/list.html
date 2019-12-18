@@ -1,14 +1,14 @@
 {{ define "main" }}
-<h2 class="text-uppercase">{{ .Title }}</h2>
-<h6 class="text-muted">Last Updated: {{ .Params.LastUpdated | default (.Date.Format "Jan 2, 2006") }}</h6>
-<div class="mt-5">
-  {{ .Content }}
-</div>
-<div class="row mt-5">
-  {{ range sort .Pages "Title" }}
-    <div class="col-3">
-      <a href="{{ .RelPermalink }}" class="btn btn-primary btn-block mb-3">{{ .Title }}</a>
-    </div>
-  {{ end }}
-</div>
+  <h2 class="text-uppercase">{{ .Title }}</h2>
+  <h6 class="text-muted">Last Updated: {{ .Params.LastUpdated | default (.Date.Format "Jan 2, 2006") }}</h6>
+  <div class="mt-5">
+    {{ .Content }}
+  </div>
+  <div class="row mt-5">
+    {{ range sort .Pages "Title" }}
+      <div class="col-3">
+        <a href="{{ .RelPermalink }}" class="btn btn-primary btn-block mb-3">{{ .Title }}</a>
+      </div>
+    {{ end }}
+  </div>
 {{ end }}
