@@ -1,0 +1,14 @@
+{{ define "main" }}
+  <div class="row">
+    <div class="col-md-3 d-none d-md-block">
+      {{- partial "sidebar.html" . }}
+    </div>
+    <div class="col-md-9 col">
+      <h2 class="text-uppercase">{{ .Title }}</h2>
+      <h6 class="text-muted">Last Updated: {{ .Params.LastUpdated | default (.Date.Format "Jan 2, 2006") }}</h6>
+      <div class="mt-5">
+        {{ .Content }}
+      </div>
+    </div>
+  </div>
+{{ end }}

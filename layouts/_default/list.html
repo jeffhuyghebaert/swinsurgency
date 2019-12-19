@@ -1,14 +1,24 @@
 {{ define "main" }}
-  <h2 class="text-uppercase">{{ .Title }}</h2>
-  <h6 class="text-muted border-bottom pb-3">Last Updated: {{ .Params.LastUpdated | default (.Date.Format "Jan 2, 2006") }}</h6>
-  <div class="mt-4">
-    {{ .Content }}
-  </div>
-  <div class="row mt-5">
-    {{ range sort .Pages "Title" }}
-      <div class="col-3">
-        <a href="{{ .RelPermalink }}" class="btn btn-primary btn-block mb-3">{{ .Title }}</a>
+  <div class="row">
+    {{ $showSidebar := and .Parent.Page (not .Parent.IsHome) }}
+    {{ if $showSidebar }}
+      <div class="col-md-3 d-none d-md-block">
+        {{- partial "sidebar.html" . }}
       </div>
     {{ end }}
+    <div class="{{ if $showSidebar }}col-md-9{{ end }} col">
+      <h2 class="text-uppercase">{{ .Title }}</h2>
+      <h6 class="text-muted border-bottom pb-3">Last Updated: {{ .Params.LastUpdated | default (.Date.Format "Jan 2, 2006") }}</h6>
+      <div class="mt-4">
+        {{ .Content }}
+      </div>
+      <div class="row mt-5">
+        {{ range sort .Pages "Title" }}
+          <div class="col-3">
+            <a href="{{ .RelPermalink }}" class="btn btn-primary btn-block mb-3">{{ .Title }}</a>
+          </div>
+        {{ end }}
+      </div>
+    </div>
   </div>
 {{ end }}

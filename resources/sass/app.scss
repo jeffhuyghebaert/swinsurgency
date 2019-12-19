@@ -62,11 +62,10 @@ main {
   font-size: 48px;
 }
 
-.navbar-nav {
-  .nav-link {
-    &.active {
-      font-weight: 500;
-    }
+.nav-link {
+  position: relative;
+  &.active {
+    font-weight: 500;
   }
 }
 
@@ -101,6 +100,24 @@ footer {
     &:hover {
       color: #aaa;
       text-decoration: underline;
+    }
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .nav-link {
+    &.active {
+      &:after {
+        content: '';
+        width: 0;
+        height: 0;
+        border-left: solid 7px transparent;
+        border-right: solid 7px transparent;
+        border-bottom: solid 7px #fafafa;
+        position: absolute;
+        bottom: -8px;
+        left: calc(50%-3px);
+      }
     }
   }
 }

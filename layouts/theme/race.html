@@ -1,17 +1,9 @@
 {{ define "main" }}
   <div class="row">
-    <div class="col-sm-3 col-md-2 d-none d-sm-block">
-      <div class="sidebar border-right">
-        <ul>
-          {{ $current := . }}
-          {{ range sort (where .Site.Pages "Params.layout" $current.Params.layout) "Title" }}
-          <li><a href="/theme/races/{{ .File.BaseFileName }}" {{ if eq .File.BaseFileName $current.File.BaseFileName }}class="active"
-              {{ end }}>{{ .Title }}</a></li>
-          {{ end }}
-        </ul>
-      </div>
+    <div class="col-md-3 d-none d-md-block">
+      {{- partial "sidebar.html" . }}
     </div>
-    <div class="col-sm-9 col-md-10 pr-md-5">
+    <div class="col-md-9 col">
       <h2 class="text-uppercase">{{ .Title }}</h2>
       <h6 class="text-muted">Last Updated: {{ .Params.LastUpdated | default (.Date.Format "Jan 2, 2006") }}</h6>
       <div class="mt-5 row">
