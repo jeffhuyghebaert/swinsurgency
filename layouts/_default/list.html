@@ -13,15 +13,26 @@
         {{ .Content }}
       </div>
       <div class="row mt-5">
-        {{ range sort .Pages "Title" }}
+        {{ range sort .Sections "Title" }}
           <div class="col-4">
-            <a href="{{ .RelPermalink }}" class="btn btn-block btn-info mb-3 text-white">
+            <a href="{{ .RelPermalink }}" class="btn btn-block btn-primary mb-3 text-white">
+              {{ .Title }}
+              {{ if eq .Kind "section" }}
+              <i data-feather="folder" class="float-right" style="width:20px;"></i>
+              {{ end }}
+            </a>
+          </div>
+        {{ end }}
+      </div>
+      <div class="row mt-5">
+        {{ range sort .RegularPages "Title" }}
+          <div class="col-4">
+            <a href="{{ .RelPermalink }}" class="btn btn-block btn-info mb-3 text-light">
               {{ .Title }}
               {{ if eq .Kind "section" }}
                 <i data-feather="folder" class="float-right" style="width:20px;"></i>
               {{ end }}
             </a>
-            
           </div>
         {{ end }}
 
