@@ -4,7 +4,7 @@ date: 2019-12-16T00:36:15-08:00
 draft: false
 slug: banned
 lastupdated: Dec 16, 2019
-layout: article
+
 ---
 
 The following concepts are banned, and are not appable in any way, shape or form on SW: Insurgency.

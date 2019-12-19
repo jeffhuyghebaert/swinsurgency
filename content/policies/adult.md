@@ -3,7 +3,7 @@ title: "Adult Activities"
 date: 2019-12-16T00:35:53-08:00
 draft: false
 slug: adult
-layout: article
+
 ---
 
 Look, we're not stupid. We're also not children, or prudes, or puritans. We know that regardless of what we say, people are going to engage in explicit sexual activity online. We're not going to try to stop you. But we ask that you keep your private activities private. And sure, accidents happen, and we can all laugh about it, but if you're caught TSing in a public place, you'll be asked to leave the game. Private rooms exist, so please use them.

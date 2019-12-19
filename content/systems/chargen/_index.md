@@ -3,7 +3,7 @@ title: "Chargen"
 date: 2019-12-13T21:52:41-08:00
 draft: false
 lastupdated: Dec 17, 2019
-layout: article
+
 ---
 
 Character Generation (CharGen) is the process by which you take the idea in your head and create a fully formed character in the context of the game. Character Generation is divided into several steps, and detailed instructions are provided at each step to walk you through the process.

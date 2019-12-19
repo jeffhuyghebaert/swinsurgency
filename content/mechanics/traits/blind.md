@@ -2,7 +2,7 @@
 title: "Blind"
 date: 2019-12-18T01:07:28-08:00
 draft: false
-layout: article
+
 ---
 
 You can't see. Period. You either don't have eyes, or they don't work. Maybe you were born with sight, but lost it, or maybe you were born blind. Whatever the case, the visual world is beyond your ability to perceive in all respects.

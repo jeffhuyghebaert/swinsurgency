@@ -4,7 +4,7 @@ date: 2019-12-16T22:58:06-08:00
 draft: false
 slug: winning
 lastupdated:
-layout: article
+
 ---
 
 As players, we generally like it when our characters succeed at what they set out to do. We, as staff, recognize that. But please understand that in these IC times, Rebels almost never "win" and Imperials almost never "lose".

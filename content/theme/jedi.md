@@ -3,7 +3,7 @@ title: "Jedi"
 date: 2019-12-18T00:34:01-08:00
 draft: false
 slug: jedi
-layout: article
+
 ---
 
 At the end of the Clone Wars, when Chancellor Palpatine enacted Order 66, the Jedi Order was effectively destroyed. Survivors largely went into hiding, exiling themselves on backwater planets. As we know, Obi-Wan Kenobi went to Tatooine to watch over Anakin Skywalker's son, and Master Yoda retreated to the Dagobah swamp. Over the years since the Empire came to power, some Jedi have attempted to help the fledgling Rebellion against their oppressors, but most, if not all, have come to a gruesome fate at the end of Darth Vader's lightsaber, or that of his Inquisitorius.

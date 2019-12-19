@@ -3,7 +3,7 @@ title: "Alternates"
 date: 2019-12-18T00:36:35-08:00
 draft: false
 slug: alternates
-layout: article
+
 ---
 
 Players are permitted to have as many characters as they wish, with few restrictions. Players are required to register all of their alternate characters in the same Alt Group upon character creation. Anyone caught purposely avoiding this risks removal from the game.

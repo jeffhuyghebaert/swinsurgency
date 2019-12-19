@@ -4,7 +4,7 @@ date: 2019-12-16T00:37:40-08:00
 draft: false
 slug: consent
 lastupdated: Dec 16, 2019
-layout: article
+
 ---
 
 SW: Insurgency is a consent-based game, and players are required to respect the consent of other players.

@@ -4,7 +4,7 @@ date: 2019-12-13T21:18:55-08:00
 draft: false
 slug: "crawl"
 lastupdated: Dec 16, 2019
-layout: article
+
 ---
 
 The CLONE WARS have been over for five years. The Galactic Republic, which had stood for a thousand years, has fallen, replaced by the humanocentric GALACTIC EMPIRE. The JEDI ORDER is all by destroyed, survived only by a handful of its members, scattered and hiding throughout the galaxy. The IMPERIAL SENATE is little more than political theatre, with no real power or influence. The EMPIRE rules through fear and force, brutally subjugating those who would stand against its tyranny. DARTH VADER and his INQUISITORS leads the charge to hunt down and destroy any and all remaining Jedi, and to quash any hint of REBELLION.

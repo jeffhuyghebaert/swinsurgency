@@ -2,7 +2,7 @@
 title: "Attractive"
 date: 2019-12-18T01:07:23-08:00
 draft: false
-layout: article
+
 ---
 
 As a specimen of your species you are generally considered to be above-average in the looks department. Those who are attracted to your species and gender (if applicable) will be more attracted to you than the average specimen. Having natural good looks comes with a lot of benefits; you tend to give a better first impression, be more trust-able, less likely to be assumed a villain, and more.

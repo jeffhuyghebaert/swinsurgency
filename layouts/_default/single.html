@@ -1,8 +1,17 @@
-
 {{ define "main" }}
-  <h2 class="text-uppercase">{{ .Title }}</h2>
-  <h6 class="text-muted">Last Updated: {{ .Params.LastUpdated | default (.Date.Format "Jan 2, 2006") }}</h6>
-  <div class="mt-5">
-    {{ .Content }}
+  <div class="row">
+    {{ $showSidebar := and .Parent.Page (not .Parent.IsHome) }}
+    {{ if $showSidebar }}
+    <div class="col-md-3 d-none d-md-block">
+      {{- partial "sidebar.html" . }}
+    </div>
+    {{ end }}
+    <div class="{{ if $showSidebar }}col-md-9{{ end }} col">
+      <h2 class="text-uppercase">{{ .Title }}</h2>
+      <h6 class="text-muted">Last Updated: {{ .Params.LastUpdated | default (.Date.Format "Jan 2, 2006") }}</h6>
+      <div class="mt-5">
+        {{ .Content }}
+      </div>
+    </div>
   </div>
 {{ end }}

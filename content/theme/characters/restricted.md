@@ -3,7 +3,7 @@ title: "Restricted"
 date: 2019-12-16T00:36:11-08:00
 draft: false
 slug: restricted
-layout: article
+
 ---
 
 Restricted concepts may be apped under the following conditions:

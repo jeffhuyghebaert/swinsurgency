@@ -4,7 +4,7 @@ date: 2019-12-16T00:37:35-08:00
 draft: false
 slug: harassment
 lastupdated: Dec 16, 2019
-layout: article
+
 ---
 
 We do not permit OOC harassment, threats, or bullying based on race, religion, gender, sexual orientation, beliefs, ethnicity, nation or planet of origin, or any other reason.
