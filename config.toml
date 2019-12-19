@@ -4,32 +4,44 @@ title = "Star Wars: Insurgency MUSH"
 
 [menu]
   [[menu.main]]
-    title = "Theme Information"
+    title = "Game Information"
+    identifier = "info"
+    weight = 1
+  [[menu.main]]
+    title = "Theme"
     identifier = "theme"
+    parent = "info"
     url = "/theme"
+    weight = 1
+  [[menu.main]]
+    title = "Mechanics"
+    identifier = "mechanics"
+    parent = "info"
+    url = "/mechanics"
     weight = 2
   [[menu.main]]
     title = "Systems"
     identifier = "systems"
+    parent = "info"
     url = "/systems"
     weight = 3
   [[menu.main]]
-    title = "Game Mechanics"
-    identifier = "mechanics"
-    url = "/mechanics"
-    weight = 4
+    title = "Policies"
+    identifier = "policies"
+    url = "/policies"
+    weight = 2
   [[menu.main]]
     title = "Roster"
     identifier = "characters"
     url = "/characters"
-    weight = 5
+    weight = 3
   [[menu.main]]
     title = "Logs"
     identifier = "logs"
     url = "/logs"
-    weight = 7
+    weight = 4
   [[menu.main]]
     title = "Resources"
     identifier = "resources"
     url = "/resources"
-    weight = 7
+    weight = 5

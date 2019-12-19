@@ -14,6 +14,9 @@ draft: false
 ##### macOS
 - Atlantis
 
+##### Linux
+- Potato
+
 #### D6 RPG
 - d6holocron.net
 - drivethrurpg

@@ -11,10 +11,27 @@
           {{ $current := . }}
           {{ range .Site.Menus.main }}
             {{ $active := or ($current.IsMenuCurrent "main" .) ($current.HasMenuCurrent "main" .) }}
+            {{ range .Children }}
+              {{ $active = or $active (eq $current.Section .Identifier) }}
+            {{ end }}
             {{ $active = or $active (eq $current.Section .Identifier) }}
-            <li class="nav-item">
-              <a class="nav-link {{if $active }} active{{end}}" href="{{ .URL }}">{{ .Title }}</a>
-            </li>
+            {{ if .HasChildren }}
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle {{ if $active }}active{{ end }}" href="#" data-toggle="dropdown" role="button">
+                  {{ .Title }}
+                </a>
+                <div class="dropdown-menu">
+                  {{ range .Children }}
+                    <a class="dropdown-item" href="{{ .URL }}">{{ .Title }}</a>
+                  {{ end }}
+                </div>
+              </li>
+              
+            {{ else }}
+              <li class="nav-item">
+                <a class="nav-link {{if $active }}active{{end}}" href="{{ .URL }}">{{ .Title }}</a>
+              </li>
+            {{ end }}
           {{ end }}
         </ul>
       </div>

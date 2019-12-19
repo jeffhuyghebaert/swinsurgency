@@ -94,6 +94,10 @@ main {
   }
 }
 
+.dropdown-toggle::after {
+  display: none;
+}
+
 footer {
   a {
     color: #aaa;
@@ -107,7 +111,7 @@ footer {
 @media screen and (min-width: 768px) {
   .nav-link {
     &.active {
-      &:after {
+      &::before {
         content: '';
         width: 0;
         height: 0;
@@ -116,7 +120,7 @@ footer {
         border-bottom: solid 7px #fafafa;
         position: absolute;
         bottom: -8px;
-        left: calc(50%-3px);
+        left: calc(50%-7px);
       }
     }
   }
