@@ -1,11 +1,11 @@
 <div class="mt-5 bg-dark">
-  <div class="container-fluid py-3">
+  <div class="container-fluid py-4">
     <div class="row">
       <div class="col-sm-4">
-        <ul class="list-group border-0">
-          <li class="list-group-item bg-transparent border-0 text-light p-2 lead">Recent Game Files</b></li>
+        <ul class="list-group border-0 pr-3">
+          <li class="list-group-item bg-transparent border-0 text-light p-0 pb-2"><b>Recent Game Files</b></li>
           {{ range $key, $value := first 5 (where .Site.Pages "Section" (or "theme" "mechanics" "policies")).ByDate.Reverse }}
-          <li class="list-group-item bg-transparent border-0 px-2 py-0">
+          <li class="list-group-item bg-transparent border-0 p-0 pr-3">
             <span class="float-left"><a href="/news/{{ .Slug }}" class="text-left">{{ .Title }}</a></span>
             <span class="text-muted float-right"><small>{{ .Date.Format "Jan 2, 2006" }}</small></span>
           </li>
@@ -13,10 +13,10 @@
         </ul>
       </div>
       <div class="col-sm-4">
-        <ul class="list-group">
-          <li class="list-group-item bg-transparent border-0 text-light p-2 lead">Recent Character Profiles</li>
+        <ul class="list-group pr-3">
+          <li class="list-group-item bg-transparent border-0 text-light p-0 pb-2"><b>Recent Character Profiles</b></li>
           {{ range $key, $value := first 5 (where .Site.RegularPages "Section" "characters").ByDate.Reverse }}
-          <li class="list-group-item bg-transparent border-0 py-0 px-2">
+          <li class="list-group-item bg-transparent border-0 p-0">
             <span class="float-left"><a href="/characters/{{ .Slug }}" class="text-left">{{ .Title }}</a></span>
             <span class="text-muted float-right"><small>{{ .Date.Format "Jan 2, 2006" }}</small></span>
           </li>
@@ -24,10 +24,10 @@
         </ul>
       </div>
       <div class="col-sm-4">
-        <ul class="list-group">
-          <li class="list-group-item bg-transparent border-0 text-light p-2 lead">Recent Logs</li>
+        <ul class="list-group pr-3">
+          <li class="list-group-item bg-transparent border-0 text-light p-0 pb-2"><b>Recent Logs</b></li>
           {{ range $key, $value := first 5 (where .Site.RegularPages "Section" "logs").ByDate.Reverse }}
-          <li class="list-group-item bg-transparent border-0 px-2 py-0">
+          <li class="list-group-item bg-transparent border-0 p-0">
             <span class="float-left"><a href="/logs/{{ .Slug }}" class="text-left">{{ .Title }}</a></span>
             <span class="text-muted float-right"><small>{{ .Date.Format "Jan 2, 2006" }}</small></span>
           </li>
