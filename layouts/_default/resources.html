@@ -1,0 +1,57 @@
+{{ define "main" }}
+  <div class="row">
+    {{ $showSidebar := and .Parent.Page (not .Parent.IsHome) }}
+    {{ if $showSidebar }}
+    <div class="col-md-3 d-none d-md-block">
+      {{- partial "sidebar.html" . }}
+    </div>
+    {{ end }}
+    <div class="{{ if $showSidebar }}col-md-9{{ end }} col">
+      <h2 class="text-uppercase">{{ .Title }}</h2>
+      <h6 class="text-muted">Last Updated: {{ .Params.LastUpdated | default (.Date.Format "Jan 2, 2006") }}</h6>
+      <div class="mt-5">
+        {{ .Content }}
+      </div>
+
+      <div class="mt-5">
+        <h5 class="text-muted">MU* Clients</h5>
+        <div class="row">
+          
+          {{ range $key, $value := .Params.clients }}
+            <div class="col-sm-3">
+            <ul class="list-group">
+              <li class="list-group-item lead bg-light">{{ humanize $key }}</li>
+              {{ range $key, $value := . }}
+              <li class="list-group-item"><a href="{{ $value }}" target="_blank" class="stretched-link">{{ humanize $key }}</a></li>
+              {{ end }}
+            </ul>
+            </div>
+          {{ end }}
+        </div>
+      </div>
+
+      <div class="mt-5">
+        <h5 class="text-muted">D6 RPG Resources</h5>
+        <div class="row">
+          {{ range $key, $value := index .Params "D6 RPG"}}
+            <div class="col-sm-3">
+              <a href="{{ $value }}" target="_blank" class="btn btn-light btn-block text-primary shadow">{{ humanize $key }}</a>
+            </div>
+          {{ end }}
+        </div>
+      </div>
+
+      <div class="mt-5">
+        <h5 class="text-muted">Star Wars Resources</h5>
+        <div class="row">
+          {{ range $key, $value := index .Params "Star Wars"}}
+          <div class="col-sm-3">
+            <a href="{{ $value }}" target="_blank" class="btn btn-light btn-block text-primary shadow">{{ humanize $key }}</a>
+          </div>
+          {{ end }}
+        </div>
+      </div>
+        
+    </div>
+  </div>
+{{ end }}
