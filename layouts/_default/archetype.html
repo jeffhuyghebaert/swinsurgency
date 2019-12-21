@@ -1,0 +1,35 @@
+{{ define "main" }}
+  <div class="row">
+    {{ $showSidebar := and .Parent.Page (not .Parent.IsHome) }}
+    {{ if $showSidebar }}
+    <div class="col-md-3 d-none d-md-block">
+      {{- partial "sidebar.html" . }}
+    </div>
+    {{ end }}
+    <div class="{{ if $showSidebar }}col-md-9{{ end }} col">
+      <h2 class="text-uppercase">{{ .Title }}</h2>
+      <h6 class="text-muted">Last Updated: {{ .Params.LastUpdated | default (.Date.Format "Jan 2, 2006") }}</h6>
+      <div class="mt-5">
+        <div class="card">
+          <div class="card-header bg-info text-light"><h5 class="m-0">{{ .Title }} Template</h5></div>
+          <div class="card-body">
+            <div class="row">
+              {{ range $key, $value := .Params.Attributes }}
+                <div class="col-sm-4 mb-4">
+                  <h6 class="border-bottom pb-1">{{ humanize $key }} <span class="float-right">{{ $value }}</span></h6>
+                  {{ range $skill, $die := (index $.Params.skills $key) }}
+                    <p class="m-0">{{ humanize $skill }} <span class="float-right">{{ $die }}</span></p>
+                  {{ end }}
+                </div>
+              {{ end }}
+            </div>
+            <p class="text-muted m-0"><small>** Species assumed to be human for display purposes.</small></p>
+          </div>
+        </div>
+      </div>
+      <div class="mt-5">
+        {{ .Content }}
+      </div>
+    </div>
+  </div>
+{{ end }}
