@@ -18,13 +18,11 @@
         <div class="row">
           
           {{ range $key, $value := .Params.clients }}
-            <div class="col-sm-3">
-            <ul class="list-group">
-              <li class="list-group-item lead bg-light">{{ humanize $key }}</li>
+            <div class="col-sm-4">
+              <h6 class="text-muted">{{ humanize $key }}</h6>
               {{ range $key, $value := . }}
-              <li class="list-group-item"><a href="{{ $value }}" target="_blank" class="stretched-link">{{ humanize $key }}</a></li>
+                <a class="btn btn-light border btn-block text-primary" href="{{ $value }}" target="_blank">{{ humanize $key }}</a>
               {{ end }}
-            </ul>
             </div>
           {{ end }}
         </div>
@@ -34,8 +32,8 @@
         <h5 class="text-muted">D6 RPG Resources</h5>
         <div class="row">
           {{ range $key, $value := index .Params "D6 RPG"}}
-            <div class="col-sm-3">
-              <a href="{{ $value }}" target="_blank" class="btn btn-light btn-block text-primary shadow">{{ humanize $key }}</a>
+            <div class="col-sm-4">
+              <a href="{{ $value }}" target="_blank" class="btn btn-light border btn-block text-primary">{{ humanize $key }}</a>
             </div>
           {{ end }}
         </div>
@@ -45,8 +43,8 @@
         <h5 class="text-muted">Star Wars Resources</h5>
         <div class="row">
           {{ range $key, $value := index .Params "Star Wars"}}
-          <div class="col-sm-3">
-            <a href="{{ $value }}" target="_blank" class="btn btn-light btn-block text-primary shadow">{{ humanize $key }}</a>
+          <div class="col-sm-4">
+            <a href="{{ $value }}" target="_blank" class="btn btn-light border btn-block text-primary">{{ humanize $key }}</a>
           </div>
           {{ end }}
         </div>
