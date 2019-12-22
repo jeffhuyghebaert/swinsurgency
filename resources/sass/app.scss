@@ -34,10 +34,18 @@ main {
 }
 
 .profile-card {
+  transition: 0.2s;
   .profile-image-wrapper {
-    min-height: 150px;
+    min-height: 100px;
     img {
       align-self: center;
+      max-height: 100px;
+      &.card-img-top {
+        max-height: 300px;
+        align-self: center;
+        width: initial;
+        padding: 15px;
+      }
     }
   }
   
@@ -45,21 +53,24 @@ main {
     color: #fff;
     text-transform: uppercase;
   }
-}
 
-.profile-card img.card-img-top {
-  max-height: 300px;
-  align-self: center;
-  width: initial;
-  padding: 15px;
-
+  &:hover {
+    transform: scale(1.25);
+  }
 }
 
 .profile-placeholder {
-  height: 150px;
+  height: 100px;
+  align-self: center;
   border-top-left-radius: 4px;
   border-top-right-radius: 4px;
   font-size: 48px;
+}
+
+.character-card {
+  .card-body {
+    min-height: 200px;
+  }
 }
 
 .nav-link {

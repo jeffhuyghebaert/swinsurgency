@@ -2,9 +2,9 @@
   <h2 class="text-uppercase border-bottom pb-3">{{ .Title }}</h2>
   <h3 class="mt-5 mb-3">Active Characters</h3>
   <div class="row">
-  {{ range where .Pages "Params.status" "active" }}
-  <div class="col-sm-3">
-    <div class="card border-0 shadow profile-card">
+  {{ range sort (where .Pages "Params.status" "active") "Title" }}
+  <div class="col-sm-3 col-md-2">
+    <div class="card border-0 shadow profile-card mb-3">
       <div class="card-body p-2 d-flex">
         {{ with (.Resources.Match "headshot.*") . }}
           {{ range . }}
@@ -14,17 +14,43 @@
             </div>
           {{ end }}
         {{ else }}
-          <div class="profile-placeholder d-flex bg-light">
-            <span class="my-auto mx-auto rounded-circle bg-primary text-light px-4 py-3">{{ .Params.initials }}</span>
+          <div class=" mx-auto profile-placeholder d-flex">
+            <span class="text-primary px-4 py-3">{{ .Params.initials }}</span>
           </div>
         {{ end }}
       </div>
-      <div class="card-footer text-center border-0 bg-info text-white">
+      <div class="card-footer text-center border-0 p-1 bg-info text-white">
         <a href="{{ .Params.slug }}" class="stretched-link">{{ .Params.fullname }}</a>
       </div>
     </div>
   </div>
   {{ end }}
   </div>
+
   <h3 class="mt-5">Retired Characters</h3>
+  <div class="row">
+    {{ range sort (where .Pages "Params.status" "retired") "Title" }}
+    <div class="col-sm-3 col-md-2">
+      <div class="card border-0 shadow profile-card mb-3">
+        <div class="card-body p-2 d-flex">
+          {{ with (.Resources.Match "headshot.*") . }}
+          {{ range . }}
+          {{ $image := .Resize "x150" }}
+          <div class="profile-image-wrapper mx-auto d-flex">
+            <img src="{{ $image.RelPermalink }}" />
+          </div>
+          {{ end }}
+          {{ else }}
+          <div class="mx-auto profile-placeholder d-flex">
+            <span class="text-primary px-4 py-3">{{ .Params.initials }}</span>
+          </div>
+          {{ end }}
+        </div>
+        <div class="card-footer text-center border-0 p-1 bg-info text-white">
+          <a href="{{ .Params.slug }}" class="stretched-link">{{ .Params.fullname }}</a>
+        </div>
+      </div>
+    </div>
+    {{ end }}
+  </div>
 {{ end }}

@@ -6,11 +6,17 @@
   </blockquote>
   <div class="row">
     <div class="col-md-6 d-flex">
-      <div class="card border-0 shadow my-auto w-100">
+      <div class="character-card card border-0 shadow my-auto w-100">
         {{ with (.Resources.Match "profile.*") . }}
-        {{ range . }}
-        <img src="{{ .RelPermalink }}" class="card-img-top" />
-        {{ end }}
+          {{ range . }}
+            <img src="{{ .RelPermalink }}" class="card-img-top" />
+          {{ end }}
+        {{ else }}
+          <div class="card-body text-center text-primary d-flex">
+            <div class="my-auto mx-auto">
+              <h1>{{ .Params.initials }}</h1>
+            </div>
+          </div>
         {{ end }}
         <div class="card-footer text-center border-0 text-muted">
           {{ with .Params.PlayedBy }}

@@ -5,13 +5,13 @@ draft: false
 layout: resources
 
 clients:
-  Windows:
+  windows:
     MUSHClient: http://www.gammon.com.au/downloads/dlmushclient.htm
     Potato: http://www.potatomushclient.com/
     BeipMU: https://beipdev.github.io/BeipMU/
   mac:
     Atlantis: https://www.riverdark.net/atlantis/
-  Linux:
+  linux:
     Potato: http://www.potatomushclient.com/
     TinTin++: https://mudhalla.net/tintin/
     TinyFugue: http://tinyfugue.sourceforge.net/
