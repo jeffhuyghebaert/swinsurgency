@@ -5,61 +5,64 @@
     <footer class="blockquote-footer">{{ .Params.FullName }}</footer>
   </blockquote>
   <div class="row">
-    <div class="col-md-6 d-flex">
-      <div class="character-card card border-0 shadow my-auto w-100">
+    <div class="col-sm-3">
+      <div class="character-card card border-0 shadow my-auto mx-auto">
         {{ with (.Resources.Match "profile.*") . }}
-          {{ range . }}
-            <img src="{{ .RelPermalink }}" class="card-img-top" />
-          {{ end }}
-        {{ else }}
-          <div class="card-body text-center text-primary d-flex">
-            <div class="my-auto mx-auto">
-              <h1>{{ .Params.initials }}</h1>
-            </div>
-          </div>
+        {{ range . }}
+        <img src="{{ .RelPermalink }}" class="card-img-top" />
         {{ end }}
-        <div class="card-footer text-center border-0 text-muted">
+        {{ else }}
+        <div class="card-body text-center text-primary d-flex">
+          <div class="my-auto mx-auto">
+            <h1>{{ .Params.initials }}</h1>
+          </div>
+        </div>
+        {{ end }}
+        <div class="p-3 text-center bg-light border-bottom">
           {{ with .Params.PlayedBy }}
-            {{ . }} as 
+          {{ . }} as
           {{ end }}
           {{ .Params.FullName }}
         </div>
+        <div class="card-body">
+          <table class="table table-borderless table-sm">
+            <tbody>
+              <tr class="border-bottom">
+                <th>Full Name:</th>
+                <td>{{ .Params.FullName }}</td>
+              </tr>
+              <tr class="border-bottom">
+                <th>Species:</th>
+                <td>{{ .Params.Race }}</td>
+              </tr>
+              <tr class="border-bottom">
+                <th>Height:</th>
+                <td>{{ .Params.CharHeight }}</td>
+              </tr>
+              <tr class="border-bottom">
+                <th>Weight:</th>
+                <td>{{ .Params.CharWeight }}</td>
+              </tr>
+              <tr class="border-bottom">
+                <th>Hair:</th>
+                <td>{{ .Params.Hair }}</td>
+              </tr>
+              <tr>
+                <th>Eyes:</th>
+                <td>{{ .Params.Eyes }}</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
       </div>
     </div>
-    <div class="col-md-6 d-flex">
-      <div class="my-auto w-100">
-        <h5 class="mb-3">Vital Statistics</h5>
-        <table class="table table-borderless table-sm">
-          <tbody>
-            <tr class="border-bottom">
-              <th>Full Name:</th><td>{{ .Params.FullName }}</td>
-            </tr>
-            <tr class="border-bottom">
-              <th>Species:</th><td>{{ .Params.Race }}</td>
-            </tr>
-            <tr class="border-bottom">
-              <th>Height:</th><td>{{ .Params.CharHeight }}</td>
-            </tr>
-            <tr class="border-bottom">
-              <th>Weight:</th><td>{{ .Params.CharWeight }}</td>
-            </tr>
-            <tr class="border-bottom">
-              <th>Hair:</th><td>{{ .Params.Hair }}</td>
-            </tr>
-            <tr>
-              <th>Eyes:</th><td>{{ .Params.Eyes }}</td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
+    <div class="col-sm-9">
+      <h5 class="border-bottom pb-3 mb-3">Physical Description</h5>
+      {{ .Params.Description }}
+
+      <h5 class="border-bottom pb-3 mb-3 mt-5">Character Background</h5>
+      {{ .Content }}
     </div>
   </div>
-  <div class="mt-5">
-    <h5 class="border-bottom pb-3 mb-3">Physical Description</h5>
-    {{ .Params.Description }}
-  </div>
-  <div class="mt-5">
-    <h5 class="border-bottom pb-3 mb-3">Character Background</h5>
-    {{ .Content }}
-  </div>
+  
 {{ end }}
