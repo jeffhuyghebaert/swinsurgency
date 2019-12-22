@@ -13,6 +13,8 @@ clients:
     Atlantis: https://www.riverdark.net/atlantis/
   Linux:
     Potato: http://www.potatomushclient.com/
+    TinTin++: https://mudhalla.net/tintin/
+    TinyFugue: http://tinyfugue.sourceforge.net/
 
 "D6 RPG":
   d6holocron.net: http://d6holocron.com/wiki/index.php?title=D6_Holocron_Wiki
